@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - "12"
+
+os: 
+  - linux
+
+install:
+  - npm install --only=prod
+  - npm link --only=prod
+  - npm install -g mocha
+
+script:
+  - npm run test-verbose
